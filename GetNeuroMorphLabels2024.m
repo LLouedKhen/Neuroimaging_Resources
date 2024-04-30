@@ -1,7 +1,12 @@
-cd '/Users/sysadmin/Documents/UniGe_ToPLaB/Recovered/ImagingData/SecondLevel_Analyses/Model42/Pain_O'
+
+%where your SPM.mat file lives
+datapath = {};
+cd(dataPath)
 load SPM.mat
 
-cd '/Users/sysadmin/Documents/UniGe_ToPLaB/Recovered/ImagingData/MediationAnalyses'
+%where your result coordinates live
+cd '/Users/sysadmin/Documents/ImagingData/MediationAnalyses'
+
 files = dir('X-M-Y_pvals_*.csv');
 for i = 1:length(files)
 thisFile = files(i).name;
